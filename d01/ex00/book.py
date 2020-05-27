@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class Book:
     def __init__(self, name):
         assert name and isinstance(name, str)
@@ -11,7 +12,6 @@ class Book:
             'lunch': [],
             'dessert': [],
         }
-        # print(self)
 
     def __str__(self):
         formatted_string = "{0} BOOK\n\tlast update\t: {1}\n\tcreation date\t: {2}\n\tstarter recipes\t:\n\n"
