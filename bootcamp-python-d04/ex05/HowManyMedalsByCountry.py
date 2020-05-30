@@ -8,7 +8,7 @@ def howManyMedalsByCountry(data, country_name):
     data["M"] = data["Medal"].str[:1]
     grouped = data.groupby(['Year'])
     grouped = grouped.M.value_counts()
-    unstacked = grouped.unstack(fill_value=0.0)
+    unstacked = grouped.unstack(fill_value=0)
     # print(unstacked.apply(int))
     return unstacked.to_dict(orient='index')
 
